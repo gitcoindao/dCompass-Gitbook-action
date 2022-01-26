@@ -16,7 +16,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: npm install
-      shell: bash
-    - run: node --experimental-json-modules index.js
+    - run: cd ${{github.action_path}} && npm install && node --experimental-json-modules index.js
       shell: bash
