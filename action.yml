@@ -1,5 +1,18 @@
 name: "upload-files-to-web3-storage"
 description: "Deploy all the files through Web3 Storage"
+inputs:
+  DID_KEY:  
+    description: 'DID_KEY'
+    required: true
+  WEB3STORAGE_TOKEN:
+    description: 'WEB3STORAGE_TOKEN'
+    required: true
+  CERAMIC_NODE_API_URL:
+    description: 'CERAMIC_NODE_API_URL'
+    required: true
+  DCOMPASS_PROJECT_ID:
+    description: 'DCOMPASS_PROJECT_ID'
+    required: true
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: 'node14'
+  main: 'index.js'
